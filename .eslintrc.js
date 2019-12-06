@@ -36,7 +36,7 @@ module.exports = {
   },
   // estava import/resolver e era import/resolve
   settings: {
-    'import/resolve' : {
+    'import/resolver' : {
       'babel-plugin-root-import' : {
         rootPathSuffix: 'src'
       },
