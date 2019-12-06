@@ -34,7 +34,6 @@ module.exports = {
     'react-hooks/exhaustive-deps': 'warn',
     'react/jsx-props-no-spreading': 'off'
   },
-  // estava import/resolver e era import/resolve
   settings: {
     'import/resolver' : {
       'babel-plugin-root-import' : {
