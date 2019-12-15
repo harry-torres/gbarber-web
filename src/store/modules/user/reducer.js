@@ -16,6 +16,11 @@ export default function user(state = INITIAL_STATE, action) {
         draft.profile = action.payload.profile;
         break;
       }
+      case actions.SIGN_OUT: {
+        console.tron.log('user reducer');
+        draft.profile = null;
+        break;
+      }
       default:
     }
   });

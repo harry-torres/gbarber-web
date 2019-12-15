@@ -3,6 +3,7 @@ const actions = {
   SIGN_UP_REQUEST: '@auth/SIGN_UP_REQUEST',
   SIGN_IN_SUCCESS: '@auth/SIGN_IN_SUCCESS',
   SIGN_FAILURE: '@auth/SIGN_FAILURE',
+  SIGN_OUT: '@auth/SIGN_OUT',
 };
 
 export default actions;
@@ -31,5 +32,11 @@ export function signUpRequest(name, email, password) {
 export function signFailure() {
   return {
     type: actions.SIGN_FAILURE,
+  };
+}
+
+export function signOut() {
+  return {
+    type: actions.SIGN_OUT,
   };
 }

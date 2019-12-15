@@ -14,10 +14,10 @@ export function* signIn({ payload }) {
 
     const { token, user } = response.data;
 
-    // if (!user.provider) {
-    //   toast.error('Usuario nao e prestador de servico');
-    //   return;
-    // }
+    if (!user.provider) {
+      toast.error('Usuario nao e prestador de servico');
+      return;
+    }
 
     api.defaults.headers.Authorization = `Bearer ${token}`;
 
@@ -57,9 +57,15 @@ export function setToken({ payload }) {
   }
 }
 
+export function signOut() {
+  console.tron.log('auth saga signout');
+  history.push('/');
+}
+
 export default all([
   // action from redux-persist
   takeLatest('persist/REHYDRATE', setToken),
   takeLatest(actions.SIGN_IN_REQUEST, signIn),
   takeLatest(actions.SIGN_UP_REQUEST, signUp),
+  takeLatest(actions.SIGN_OUT, signOut),
 ]);
