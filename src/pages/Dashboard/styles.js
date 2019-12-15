@@ -11,16 +11,16 @@ export const Container = styled.div`
     display: flex;
     align-self: center;
     align-items: center;
-  }
-
-  button {
-    border: 0;
-    background: none;
     strong {
       color: #fff;
       font-size: 24px;
       margin: 0 15px;
     }
+  }
+
+  button {
+    border: 0;
+    background: none;
   }
 
   ul {
