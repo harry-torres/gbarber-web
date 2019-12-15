@@ -14,10 +14,10 @@ export function* signIn({ payload }) {
 
     const { token, user } = response.data;
 
-    if (!user.provider) {
-      toast.error('Usuario nao e prestador de servico');
-      return;
-    }
+    // if (!user.provider) {
+    //   toast.error('Usuario nao e prestador de servico');
+    //   return;
+    // }
 
     api.defaults.headers.Authorization = `Bearer ${token}`;
 
